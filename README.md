@@ -14,13 +14,13 @@ Then add the script to your page (be sure to include the Google Places API as we
 
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-<script src="/bower_components/angular-google-places-autocomplete/src/autocomplete.js"></script>
+<script src="/bower_components/angular-google-places-autocomplete-callback/src/autocomplete.js"></script>
 ```
 
 You'll probably also want the styles:
 
 ```html
-<link rel="stylesheet" href="/bower_components/angular-google-places-autocomplete/src/autocomplete.css">
+<link rel="stylesheet" href="/bower_components/angular-google-places-autocomplete-callback/src/autocomplete.css">
 ```
 
 Usage
