@@ -44,7 +44,15 @@ The directive also supports the following _optional_ attributes:
 * options &mdash; See [google.maps.places.AutocompleteRequest object specification](https://developers.google.com/maps/documentation/javascript/reference#AutocompletionRequest).
 
 **The original directive fires an event called "g-places-autocomplete:select" with the prediction as parameter. My patch adds the possibility to add a callback when that event is fired, ie: when a new place is selected.
-To use it, just add an attribute: on-place-updated="myCallback(prediction)" to your directive. In your controller, define $scope.myCallback(prediction). That function will be called every time a new place is selected from the directive.
+To use it, just add an attribute: on-place-updated="myCallback(prediction)" to your directive. In your controller, define $scope.myCallback(place). That function will be called every time a new place is selected from the directive.
+eg. <input type="text" name="address" on-place-updated="vm.googlePlaceComponentsFilter(place)"  ng-model="vm.contact.addresses[0].address_line_1" g-places-autocomplete/>
+
+controller:
+        vm.googlePlaceComponentsFilter = googlePlaceComponentsFilter;
+        function googlePlaceComponentsFilter(place){
+            //do whatever you want to do with place data.
+            console.log(place);
+        }
 
 Examples
 --------
