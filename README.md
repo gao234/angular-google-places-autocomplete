@@ -20,7 +20,7 @@ Then add the script to your page (be sure to include the Google Places API as we
 You'll probably also want the styles:
 
 ```html
-<link rel="stylesheet" href="/bower_components/angular-google-places-autocomplete-/src/autocomplete.css">
+<link rel="stylesheet" href="/bower_components/angular-google-places-autocomplete/src/autocomplete.css">
 ```
 
 Usage
