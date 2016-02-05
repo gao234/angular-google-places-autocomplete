@@ -43,6 +43,9 @@ The directive also supports the following _optional_ attributes:
 * forceSelection &mdash; forces the user to select from the dropdown. Defaults to `false`.
 * options &mdash; See [google.maps.places.AutocompleteRequest object specification](https://developers.google.com/maps/documentation/javascript/reference#AutocompletionRequest).
 
+**The original directive fires an event called "g-places-autocomplete:select" with the prediction as parameter. My patch adds the possibility to add a callback when that event is fired, ie: when a new place is selected.
+To use it, just add an attribute: on-place-updated="myCallback(prediction)" to your directive. In your controller, define $scope.myCallback(prediction). That function will be called every time a new place is selected from the directive.
+
 Examples
 --------
 
