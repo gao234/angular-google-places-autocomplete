@@ -68,9 +68,9 @@ angular.module('google.places', [])
                         element.bind('blur', onBlur);
                         element.bind('submit', onBlur);
 
-+                        $scope.$on("g-places-autocomplete:select", function(e, prediction) {
-+                            $scope.onPlaceUpdated({ place: prediction });
-+                        });
+                        $scope.$on("g-places-autocomplete:select", function(e, prediction) {
+                            $scope.onPlaceUpdated({ place: prediction });
+                        });
 
                         $scope.$watch('selected', select);
                     }
